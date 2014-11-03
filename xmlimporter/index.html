@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Conte XML Importer by Vitaly Soroko
+</title>
+<style>
+header, nav, footer, section
+{
+text-align: center;
+}
+</style>
+<script type="text/javascript">
+function height_plus (elem, elem_height) {
+        var height = elem.offsetHeight;
+        if (height < elem_height) {
+                elem.style.height = height + 1 + "px";
+                setTimeout (function(){height_plus(elem, elem_height)}, 5);
+        }
+}
+function Hide1 ()
+{
+//height_plus(document.getElementById('local_file'), 1);
+document.getElementById("local_file").style.visibility = "hidden";
+document.getElementById("server_file").style.visibility = "visible";
+}
+function Hide2 ()
+{
+//height_plus(document.getElementById('local_file'), 100);
+document.getElementById("server_file").style.visibility = "hidden";
+document.getElementById("local_file").style.visibility = "visible";
+}
+
+</script>
+</head>
+<body>
+  <header> Conte XML Importer ver.0.1 Alpha by Vitaly Soroko</header>
+  <nav> <a href="options.html"> Options </a></nav>
+  <article>
+    <section>
+	
+     <br />
+	 <h1> Step 1- Select input file and press next button ... </h1>
+	 
+	 <p><b>Choose file location:</b></p>
+	 <p><input type="radio" name="answer" value="a1" OnClick="javascript: Hide1();" checked>Existing file on server</input>
+	 <input type="radio" name="answer" value="a2" OnClick="javascript: Hide2();"> On your local computer</input></p>
+	 <div id="local_file" style="visibility: hidden;">
+	 <form action="importer.php" method="post" enctype="multipart/form-data">
+	 Input File: 
+	 <input type="text" /> <input type="button" value="Browse" />
+	 <br />
+	 <br />
+	 <input type="submit" value="Next ->" />      
+	 </form>
+	 </div>
+	 <div id="server_file">
+	 <form action="importer.php" method="post" enctype="multipart/form-data">
+	 Select existing file:
+	 <?php
+  	 include_once 'controller.php';
+	 $v1 = new OpenFile();
+	 $v1->ListFromServer('xml_files');
+	 //$v1->ListFromServer('/xmls/');
+?>
+ 
+	 <input type="submit" value="Next ->" />      
+	 </form>
+	 </div>
+	 
+	 <br />
+	 <br />
+    </section>
+  </article>
+  <footer>Conte 2014</footer>
+</body>
+</html>
