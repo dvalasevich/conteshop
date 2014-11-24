@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<product_list>
+<product>
+<brand>
+CONTE ELEGANT
+</brand>
+<type>
+колготки
+</type>
+<name>
+CLASS 20 DEN
+</name>
+<media>
+<image>
+http://server_url/opened_folder_for_external_access/500001_01.jpg
+</image>
+<image>
+http://server_url/opened_folder_for_external_access/500001_02.jpg
+</image>
+<image>
+http://server_url/opened_folder_for_external_access/500001_03.jpg
+</image>
+</media>
+<price>
+11,00
+</price>
+<sku>
+231231231
+</sku>
+<sku_mf>
+RDC123
+</sku_mf>
+<status>
+false
+</status>
+<description>
+Women's tights CONTE ELEGANT EVENT, s.2, bianco
+</description>
+<short_descriptrion>
+Women's tights CONTE ELEGANT EVENT
+</short_descriptrion>
+<size>
+2
+</size>
+<color>
+white05
+</color>
+<color_image>
+http://server_url/opened_folder_for_external_access/white05.jpg
+</color_image>
+<icons>
+<image>
+http://server_url/opened_folder_for_external_access2/icon01.jpg
+</image>
+<image>
+http://server_url/opened_folder_for_external_access2/icon02.jpg
+</image>
+</icons>
+<pattern>
+http://server_url/opened_folder_for_external_access3/pattern08.jpg
+</pattern>
+</product>
+</product_list>
